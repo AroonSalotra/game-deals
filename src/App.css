@@ -1,3 +1,9 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -7,11 +13,39 @@
   pointer-events: none;
 }
 
+.header {
+  background: rgb(201, 198, 198);
+}
+
 .container-game {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+}
+
+.container-game-grid {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+}
+
+.game-card {
+  background: rgb(238, 234, 234);
+  box-shadow: 5px 5px rgb(104, 100, 100);
+  width: 12rem;
+}
+
+.game-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* word-wrap: break-word; */
+}
+
+.game-card:hover {
+  transform: translateY(-0.5rem);
 }
 
 .score {
@@ -26,8 +60,9 @@
 
 .game-img {
   width: auto;
-  height: 75px;
+  height: 72px;
 }
+
 
 .price {
   display: flex;
@@ -54,3 +89,9 @@
 }
 
 .show {}
+
+#search {
+  /* border-radius: 50px; */
+  font-size: 1.5rem;
+  padding: 2px;
+}

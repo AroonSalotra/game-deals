@@ -1,15 +1,12 @@
 import useGetAPI from "./useGetAPI";
 
-
-
-const Rating = () => {
-    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=90&onSale=true`, 6)
+const Recent = () => {
+    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=1&sortBy=Release`, 6)
     console.log(data)
-
     return (
         <>
-            <h2>Highest Rated</h2>
-            <div className="container-game">
+            <h2>Most Recent</h2>
+            <div className="container-game-grid">
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID }) => {
                     return <div key={gameID} className="game-card">
                         <img src={thumb} className="game-img" alt="" />
@@ -27,4 +24,4 @@ const Rating = () => {
     );
 }
 
-export default Rating;
+export default Recent;
