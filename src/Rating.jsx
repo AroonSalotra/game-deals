@@ -9,10 +9,10 @@ const Rating = ({ redirect }) => {
 
     return (
         <>
-            <h2>Highest Rated</h2>
+            <h2 className="title">Highest Rated</h2>
             <div className="container-game">
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID }) => {
-                    return <div key={gameID} className="game-card">
+                    return <div key={gameID} className="game-card medium">
                         <a href={`${redirect}${dealID}`} target={"_blank"}>
                             <img src={thumb} className="game-img" alt="" />
                             <p className="game-title">{title}</p>

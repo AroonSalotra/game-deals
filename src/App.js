@@ -6,6 +6,8 @@ import { useState } from 'react';
 import Rating from './Rating';
 import Header from './Header';
 import Recent from './Recent';
+import PriceLow from './PriceLow';
+import Featured from './Featured';
 
 function App() {
 
@@ -18,10 +20,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <Search link={link} />
+      {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
+      <Featured redirect={redirect} />
       <Rating redirect={redirect} />
-      <Recent />
+      <PriceLow />
+      <Recent redirect={redirect} />
     </div>
   );
 }
