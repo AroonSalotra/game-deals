@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   text-align: center;
 }
@@ -30,6 +35,15 @@
   /* justify-content: center; */
   align-items: center;
   gap: 2rem;
+}
+
+.search-content {
+  outline: 3px solid rgb(128, 14, 14);
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 1rem);
+  background: gray;
 }
 
 .game-card {

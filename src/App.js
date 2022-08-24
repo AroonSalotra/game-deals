@@ -10,6 +10,7 @@ import Recent from './Recent';
 function App() {
 
   const link = "https://www.cheapshark.com/api/1.0/"
+  const redirect = "https://www.cheapshark.com/redirect?dealID="
 
   // console.log(`root state = ${search}`)
 
@@ -19,7 +20,7 @@ function App() {
       <Header />
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <Search link={link} />
-      <Rating />
+      <Rating redirect={redirect} />
       <Recent />
     </div>
   );

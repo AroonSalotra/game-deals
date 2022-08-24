@@ -51,7 +51,7 @@ const Search = ({ link }) => {
         <>
             <div className="container-search">
                 <label onClick={() => handleClick()} className="input-search">
-                    <input ref={ref} id="search" autoFocus
+                    <input ref={ref} id="search" autoFocus autoComplete="off"
                         type="text" value={search} onChange={(e) => handleChange(e)} />
                 </label>
             </div>
@@ -66,14 +66,15 @@ const Search = ({ link }) => {
                     : null}
             </div> */}
 
-
-            {data !== null && typeof(data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID }) => {
-                    return <div key={gameID}>
+            <div className={`${display} search-content`}>
+                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID }) => {
+                    return <div key={gameID} className="">
                         <img src={thumb} className="game-img" alt="" />
                         <p className="score">{metacriticScore}</p>
                     </div>
                 })
-            : null }
+                    : null}
+            </div>
 
         </>
     );
