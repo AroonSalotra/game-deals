@@ -91,10 +91,24 @@ ul {
   margin: auto; */
 }
 
+.container-row {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 3rem 4rem;
+}
+
 .container-group {
   display: flex;
   justify-content: center;
-  padding-left: 12rem;
+  /* padding-left: 12rem; */
+  gap: 2rem;
+  border-top: 5px solid var(--clr-a);
+}
+
+.bg {
+  background: var(--clr-d);
 }
 
 .flex-fit {}
@@ -173,11 +187,11 @@ ul {
 }
 
 .search-content {
-  outline: 3px solid rgb(128, 14, 14);
+  /* outline: 3px solid rgb(128, 14, 14); */
   width: fit-content;
   position: absolute;
   left: 50%;
-  transform: translate(-40%, 6rem);
+  transform: translate(-40%, 7rem);
   background: gray;
   z-index: 10;
   overflow-y: auto;

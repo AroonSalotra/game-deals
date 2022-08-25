@@ -66,7 +66,7 @@ const Search = ({ link, redirect }) => {
     return (
         <>
             <div className="container-search">
-                <p>{search.length}</p>
+                {/* <p>{search.length}</p> */}
                 <label onClick={() => handleClick()} className="input-search">
                     <p className="search-title">Search</p>
                     <input ref={ref} id="search" autoComplete="off" autoFocus
@@ -77,10 +77,11 @@ const Search = ({ link, redirect }) => {
             </div>
 
             <div className={`${display} search-content`}>
-                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice }) => {
+                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice, steamAppID }) => {
                     return <div key={gameID}>
                         <a href={`${redirect}${dealID}`} target="_blank" rel="noreferrer">
                             <img src={thumb} className="game-img" alt="" />
+                            {/* <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`} className="game-img" alt={title} /> */}
                             {/* <p className="score">{metacriticScore}</p> */}
                             {/* {isOnSale === "0" ? <p>{normalPrice}</p> :} */}
                             <p>${isOnSale === "0" ? normalPrice : salePrice}</p>

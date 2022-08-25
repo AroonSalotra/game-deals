@@ -8,6 +8,8 @@ import Header from './Header';
 import Recent from './Recent';
 import PriceLow from './PriceLow';
 import Featured from './Featured';
+import PriceMed from './PriceMed';
+import RatingSteam from './RatingSteam';
 
 function App() {
 
@@ -33,6 +35,10 @@ function App() {
         <Recent redirect={redirect} />
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
+      <div className='container-group bg'>
+        <PriceMed />
+        <RatingSteam />
+      </div>
       <PriceLow redirect={redirect} roundNum={roundNum} />
     </div>
   );
