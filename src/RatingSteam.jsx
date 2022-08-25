@@ -19,7 +19,7 @@ const RatingSteam = () => {
                             <p className="sale-price">${salePrice}</p>
                             <p className="normal-price">${normalPrice}</p>
                         </div>
-                        {/* <p className="score">{steamRatingPercent}%</p> */}
+                        <p className="rating">{steamRatingPercent}%</p>
                         {/* </a> */}
                     </div>
                 })

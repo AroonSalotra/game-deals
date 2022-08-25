@@ -28,7 +28,7 @@ const Rating = ({ redirect, roundNum }) => {
                                 <li className="normal-price">{normalPrice}</li>
                                 {/* <li className="score">{metacriticScore}</li> */}
                             </ul>
-                            <p className="discount">{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>
+                            <p className="discount">-{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>
                         </a>
                     </div>
 

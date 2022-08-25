@@ -275,6 +275,16 @@ ul {
   /* transform: translate(4rem, -0.1rem); */
 }
 
+.rating {
+  font-size: 1.3rem;
+  color: var(--clr-a);
+  background: rgb(43, 40, 40);
+  width: 3rem;
+  font-weight: 700;
+  position: absolute;
+  box-shadow: 3px 3px rgb(92, 10, 10);
+}
+
 .featured-discount {
   transform: translate(0.2rem, -3.1rem);
   font-size: 2rem;
@@ -344,8 +354,8 @@ ul {
   .container-game {
     padding: 4rem 0;
   }
-  .title {
-  }
+
+  .title {}
 
   .header-content {
     padding-right: 0;
