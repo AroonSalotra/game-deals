@@ -9,7 +9,7 @@ const RatingSteam = () => {
     return (
         <div>
             <div className="container-row">
-                <h2 className="title">Community Rating</h2>
+                <h2 className="title title-small">Community Rating</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID, steamRatingPercent }) => {
                     return <div key={gameID} className="game-card">
                         {/* <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer"> */}
