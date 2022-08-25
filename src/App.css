@@ -4,9 +4,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-a: #C3CEDA;
+  --clr-b: #738FA7;
+  --clr-c: #0C4160;
+  --clr-d: #071330;
+}
+
+body {
+  background: var(--clr-c);
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  list-style: none;
 }
 
 .App {
@@ -23,8 +38,12 @@ a {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 900;
   font-size: 2rem;
+  background: var(--clr-b);
+  color: var(--clr-c);
+  text-transform: uppercase;
+  box-shadow: 5px 5px rgb(104, 100, 100);
 }
 
 .container-game {
@@ -32,35 +51,73 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem 0;
+  /* padding-left: 30%; */
+  /* width: 50rem;
+  margin: auto; */
 }
+
+.container-group {
+  display: flex;
+  justify-content: center;
+  padding-left: 12rem;
+}
+
+.flex-fit {}
 
 .container-game-grid {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   /* justify-content: center; */
-  align-items: center;
   /* gap: 2rem; */
 }
 
 .featured-container {
   /* display: flex; */
   /* justify-content: center; */
+  /* padding-top: .5rem; */
+  padding: 2.3rem 0;
 }
 
 .featured-btns {
   display: flex;
   justify-content: center;
+  /* justify-content: space-around; */
   user-select: none;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  padding-top: 1rem;
+  color: var(--clr-b);
+}
+
+#prev, #next {
+  cursor: pointer;
 }
 
 #prev:active, #next:active {
-
+  color: white;
 }
 
 .featured-img {
   width: auto;
   height: 300px;
+  border: 5px solid gray;
+  box-shadow: 0 5px 5px 0 black;
+  transition: all 1s ease;
+}
+
+.anim {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
@@ -69,21 +126,24 @@ a {
   width: fit-content;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 1rem);
+  transform: translate(-50%, 0.2rem);
   background: gray;
   z-index: 10;
+  overflow-y: scroll;
+  height: 30rem;
 }
 
 .game-card {
   background: rgb(238, 234, 234);
   box-shadow: 5px 5px rgb(104, 100, 100);
   width: 12rem;
+  transition: transform 200ms ease-in;
 }
 
 .game-title {
   font-size: 1.1rem;
   font-weight: 600;
-  /* word-wrap: break-word; */
+  word-wrap: break-word;
 }
 
 .small {
@@ -100,6 +160,7 @@ a {
 
 .game-card:hover {
   transform: translateY(-0.5rem);
+  transition: transform 200ms ease-out;
 }
 
 .score {
@@ -125,6 +186,16 @@ a {
   align-items: baseline;
 }
 
+.discount {
+  font-size: 1.3rem;
+  background: rgb(197, 63, 63);
+  width: 3rem;
+  font-weight: 700;
+  position: absolute;
+  box-shadow: 3px 3px rgb(92, 10, 10);
+  /* transform: translate(4rem, -0.1rem); */
+}
+
 .sale-price {
   font-size: 1.5rem;
   font-weight: 700;
@@ -148,4 +219,12 @@ a {
   /* border-radius: 50px; */
   font-size: 1.5rem;
   padding: 2px;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transition: all 350ms;
+}
+
+#search:focus {
+  border-radius: 0px;
+  transition: all 550ms;
 }

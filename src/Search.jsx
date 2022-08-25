@@ -2,7 +2,7 @@ import useGetAPI from "./useGetAPI";
 import { useEffect, useState, useRef } from "react"
 import axios from "axios"
 
-const Search = ({ link }) => {
+const Search = ({ link, redirect }) => {
 
     const [search, setSearch] = useState("")
     const [amount, setAmount] = useState(5)
@@ -21,7 +21,7 @@ const Search = ({ link }) => {
 
     const handleChange = (e) => {
         if (e.target.value.length > 1) {
-            setUrl(`https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${search}`)
+            setUrl(`https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${search}&metacritic=1`)
             setAmount()
         } else {
             setUrl(`https://www.cheapshark.com/api/1.0/deals?storeID=1&onSale=true&upperPrice=20&metacritic=80`)
@@ -67,10 +67,14 @@ const Search = ({ link }) => {
             </div> */}
 
             <div className={`${display} search-content`}>
-                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID }) => {
+                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice }) => {
                     return <div key={gameID} className="">
-                        <img src={thumb} className="game-img" alt="" />
-                        <p className="score">{metacriticScore}</p>
+                        <a href={`${redirect}${dealID}`} target="_blank">
+                            <img src={thumb} className="game-img" alt="" />
+                            {/* <p className="score">{metacriticScore}</p> */}
+                            {/* {isOnSale === "0" ? <p>{normalPrice}</p> :} */}
+                            <p>${isOnSale === "0" ? normalPrice : salePrice }</p>
+                        </a>
                     </div>
                 })
                     : null}

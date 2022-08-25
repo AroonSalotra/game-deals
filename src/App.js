@@ -16,16 +16,22 @@ function App() {
 
   // console.log(`root state = ${search}`)
 
+  const roundNum = (target) => {
+    return Number(target).toFixed(0)
+  }
+
 
   return (
     <div className="App">
       <Header />
-      <Search link={link} />
+      <Search link={link} redirect={redirect} />
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
-      <Featured redirect={redirect} />
-      <Rating redirect={redirect} />
-      <PriceLow />
-      <Recent redirect={redirect} />
+      <div className='container-group'>
+        <Featured redirect={redirect} />
+        <Recent redirect={redirect} />
+      </div>
+      <Rating redirect={redirect} roundNum={roundNum} />
+      <PriceLow redirect={redirect} roundNum={roundNum} />
     </div>
   );
 }

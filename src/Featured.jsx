@@ -25,12 +25,12 @@ const Featured = ({ redirect }) => {
 
     return (
         <>
-            <h2>Hottest Deals</h2>
+            {/* <h2 className="title">Hottest Deals</h2> */}
             <div className="featured-container">
                 {data ?
-                    <a href={`${redirect}${data[index].dealID}`} target={"_blank"}>
-                        <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`} alt="" className="featured-img" />
-
+                    <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
+                        <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`} 
+                        alt="" className="featured-img" />
                     </a>
                     : null}
                 <div className="featured-btns">
