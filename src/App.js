@@ -27,7 +27,7 @@ function App() {
       <Search link={link} redirect={redirect} />
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <div className='container-group'>
-        <Featured redirect={redirect} />
+        <Featured redirect={redirect} roundNum={roundNum} />
         <Recent redirect={redirect} />
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />

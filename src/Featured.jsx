@@ -2,7 +2,7 @@ import useGetAPI from "./useGetAPI";
 import { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
-const Featured = ({ redirect }) => {
+const Featured = ({ redirect, roundNum }) => {
     const [index, setIndex] = useState(0)
 
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&metacritic=90&steamRating=90&onSale=true", 3)
@@ -27,11 +27,13 @@ const Featured = ({ redirect }) => {
         <>
             {/* <h2 className="title">Hottest Deals</h2> */}
             <div className="featured-container">
-                {data ?
+                {data ? <div>
                     <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
-                        <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`} 
-                        alt="" className="featured-img" />
+                        <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
+                            alt="" className="featured-img" />
                     </a>
+                    <p className="featured-discount">{roundNum(data[index].savings)}%</p>
+                </div>
                     : null}
                 <div className="featured-btns">
                     <IoIosArrowBack id="prev" onClick={(e) => changeIndex(e)} />

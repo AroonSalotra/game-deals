@@ -51,20 +51,11 @@ const Search = ({ link, redirect }) => {
         <>
             <div className="container-search">
                 <label onClick={() => handleClick()} className="input-search">
+                <p className="search-title">Search</p>
                     <input ref={ref} id="search" autoFocus autoComplete="off"
                         type="text" value={search} onChange={(e) => handleChange(e)} />
                 </label>
             </div>
-
-            {/* <div className={display}>
-                {data ? data.map(({ title, metacriticScore, thumb, gameID }) => {
-                    return <div key={gameID}>
-                        <img src={thumb} className="game-img" alt="" />
-                        <p className="score">{metacriticScore}</p>
-                    </div>
-                })
-                    : null}
-            </div> */}
 
             <div className={`${display} search-content`}>
                 {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice }) => {

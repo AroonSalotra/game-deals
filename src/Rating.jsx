@@ -18,13 +18,14 @@ const Rating = ({ redirect, roundNum }) => {
             <div className="container-game">
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings }) => {
                     return <div key={gameID} className="game-card medium">
-                        <a href={`${redirect}${dealID}`} target={"_blank"}>
-                            <img src={thumb} className="game-img" alt="" />
+                        <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer">
+                            <img src={thumb} className="game-img" alt={title} />
                             <p className="game-title">{title}</p>
+                            <p className="score">{metacriticScore}</p>
                             <ul className="price">
                                 <li className="sale-price">{salePrice}</li>
                                 <li className="normal-price">{normalPrice}</li>
-                                <li className="score">{metacriticScore}</li>
+                                {/* <li className="score">{metacriticScore}</li> */}
                             </ul>
                             <p className="discount">{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>
                         </a>
