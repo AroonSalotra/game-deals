@@ -10,6 +10,7 @@ import PriceLow from './PriceLow';
 import Featured from './Featured';
 import PriceMed from './PriceMed';
 import RatingSteam from './RatingSteam';
+import Footer from './Footer';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <RatingSteam />
       </div>
       <PriceLow redirect={redirect} roundNum={roundNum} />
+      <Footer />
     </div>
   );
 }

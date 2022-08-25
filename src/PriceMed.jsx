@@ -7,7 +7,7 @@ const PriceMed = () => {
     return (
         <>
             <div className="container-row">
-                <h2 className="title">Under 30</h2>
+                <h2 className="title">Under $30</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
                     return <div key={gameID} className="game-card">
                         {/* <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer"> */}

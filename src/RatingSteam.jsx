@@ -9,8 +9,8 @@ const RatingSteam = () => {
     return (
         <div>
             <div className="container-row">
-                <h2 className="title">Community</h2>
-                {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
+                <h2 className="title">Community Rating</h2>
+                {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID, steamRatingPercent }) => {
                     return <div key={gameID} className="game-card">
                         {/* <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer"> */}
                         <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
@@ -19,6 +19,7 @@ const RatingSteam = () => {
                             <p className="sale-price">${salePrice}</p>
                             <p className="normal-price">${normalPrice}</p>
                         </div>
+                        {/* <p className="score">{steamRatingPercent}%</p> */}
                         {/* </a> */}
                     </div>
                 })
