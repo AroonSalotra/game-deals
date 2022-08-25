@@ -20,6 +20,7 @@ const Featured = ({ redirect, roundNum }) => {
         }
     }
 
+
     // <img src={data[index].thumb} alt="" className="featured-img" />
 
 

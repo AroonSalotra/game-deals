@@ -209,8 +209,10 @@ ul {
 }
 
 .game-img {
+  /* width: auto;
+  height: 72px; */
   width: auto;
-  height: 72px;
+  height: 90px;
 }
 
 .price {
@@ -260,4 +262,3 @@ ul {
 }
 
 .show {}
-
