@@ -23,8 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Search link={link} redirect={redirect} />
+      <div className='header'>
+        <Header />
+        <Search link={link} redirect={redirect} />
+      </div>
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <div className='container-group'>
         <Featured redirect={redirect} roundNum={roundNum} />

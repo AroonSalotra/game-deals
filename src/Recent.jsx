@@ -1,7 +1,7 @@
 import useGetAPI from "./useGetAPI";
 
 const Recent = ({ redirect }) => {
-    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=1&sortBy=Release`, 4)
+    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=1&sortBy=Release`, 3)
     console.log(data)
     return (
         <>

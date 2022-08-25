@@ -1,8 +1,11 @@
+import { AiOutlineNotification } from "react-icons/ai"
+
 const Header = () => {
     return (
-        <header className="header">
-        <h1>Deal finder</h1>
-        </header>
+        <div className="header-content">
+            {/* <AiOutlineNotification className="icon-large header-icon" /> */}
+            <h1 className="header-title">Steam Deal Finder</h1>
+        </div>
     );
 }
 

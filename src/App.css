@@ -13,6 +13,9 @@
 
 body {
   background: var(--clr-c);
+  /* background-image: url(https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=536&q=80);
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 a {
@@ -34,16 +37,47 @@ ul {
 }
 
 .header {
-  background: rgb(201, 198, 198);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* align-items: baseline; */
+  /* gap: 20rem; */
+  background: var(--clr-b);
+}
+
+.icon-large {
+  font-size: 3rem;
+}
+
+.header-icon {}
+
+.header-title {
+  /* display: flex; */
+  font-size: 3rem;
+}
+
+.header-title-split {}
+
+.header-content {
+  padding-right: 5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .title {
   font-weight: 900;
   font-size: 2rem;
   background: var(--clr-b);
-  color: var(--clr-c);
+  /* color: var(--clr-c); */
   text-transform: uppercase;
   box-shadow: 5px 5px rgb(104, 100, 100);
+  filter: hue-rotate(280deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1636690568786-7e83bd2bd789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);
 }
 
 .container-game {
@@ -69,6 +103,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-top: 2rem;
   /* justify-content: center; */
   /* gap: 2rem; */
 }
@@ -86,7 +121,7 @@ ul {
   /* justify-content: space-around; */
   user-select: none;
   font-size: 3.5rem;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   color: var(--clr-b);
 }
 
@@ -123,8 +158,8 @@ ul {
 
 .input-search {
   display: flex;
-  justify-content: center;
-  padding-top: 2rem;
+  /* justify-content: center; */
+  /* padding-top: 2rem; */
 }
 
 .search-title {
@@ -142,11 +177,20 @@ ul {
   width: fit-content;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0.2rem);
+  transform: translate(-40%, 6rem);
   background: gray;
   z-index: 10;
   overflow-y: auto;
   max-height: 30rem;
+}
+
+.search-btn {
+  position: absolute;
+  font-size: 2rem;
+  /* width: 2rem; */
+  background: none;
+  border: none;
+  transform: translateX(21rem);
 }
 
 #search {
@@ -261,4 +305,6 @@ ul {
   display: none;
 }
 
-.show {}
+.show {
+  display: block;
+}
