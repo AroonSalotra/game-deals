@@ -36,11 +36,9 @@ function App() {
         <Recent redirect={redirect} />
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
-      <div className='container-group bg'>
+      <PriceLow redirect={redirect} roundNum={roundNum} />
         <PriceMed />
         <RatingSteam />
-      </div>
-      <PriceLow redirect={redirect} roundNum={roundNum} />
       <Footer />
     </div>
   );

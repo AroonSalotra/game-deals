@@ -51,6 +51,21 @@ ul {
   font-size: 3rem;
 }
 
+.icon-next {
+  font-size: 4rem;
+  background: var(--clr-a);
+  transition: all 1s ease;
+}
+
+.icon-next:hover {
+  transition: all 1s ease;
+}
+
+.icon-next:active {
+}
+
+
+
 .header-icon {}
 
 .header-title {
@@ -84,6 +99,8 @@ ul {
   width: 11rem;
   /* height: 3rem; */
   font-size: 1.5rem;
+  /* padding-top: 1.5rem; */
+  height: fit-content;
 }
 
 .container-game {
@@ -99,8 +116,10 @@ ul {
 
 .container-row {
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  /* flex-direction: column; */
+  /* align-items: baseline; */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 3rem 4rem;
 }

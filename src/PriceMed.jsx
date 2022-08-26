@@ -1,12 +1,20 @@
 import useGetAPI from "./useGetAPI";
+import { useState } from "react";
+import { GrNext, GrFormNext } from "react-icons/gr"
 
 const PriceMed = () => {
 
-    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=20&metacritic=1", 4)
+    const [index, setIndex] = useState(0)
+
+    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=15&metacritic=1&pageNumber=${index}`, 4)
+
+    const handleClick = () => {
+        (index > 2 ? setIndex(0) : setIndex(index + 1))
+    }
 
     return (
         <>
-            <div className="container-row">
+            <div className="container-row bg">
                 <h2 className="title title-small">Games under $30</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
                     return <div key={gameID} className="game-card">
@@ -17,10 +25,14 @@ const PriceMed = () => {
                             <p className="sale-price">${salePrice}</p>
                             <p className="normal-price">${normalPrice}</p>
                         </div>
+
                         {/* </a> */}
+
                     </div>
                 })
                     : null}
+
+                <GrFormNext className="icon-next" onClick={() => handleClick()} />
             </div>
         </>
     );
