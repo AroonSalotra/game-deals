@@ -8,7 +8,7 @@ const PriceMed = () => {
 
     const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=15&metacritic=1&pageNumber=${index}`, 4)
 
-    const handleClick = () => {
+    const handlePageIndex = () => {
         (index > 2 ? setIndex(0) : setIndex(index + 1))
     }
 
@@ -32,7 +32,7 @@ const PriceMed = () => {
                 })
                     : null}
 
-                <GrFormNext className="icon-next" onClick={() => handleClick()} />
+                <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
             </div>
         </>
     );

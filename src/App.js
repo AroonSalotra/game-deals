@@ -13,6 +13,7 @@ import RatingSteam from './RatingSteam';
 import Footer from './Footer';
 
 function App() {
+  const [index, setIndex] = useState(0)
 
   const link = "https://www.cheapshark.com/api/1.0/"
   const redirect = "https://www.cheapshark.com/redirect?dealID="
@@ -21,6 +22,10 @@ function App() {
 
   const roundNum = (target) => {
     return Number(target).toFixed(0)
+  }
+
+  const handlePageIndex = () => {
+    (index > 2 ? setIndex(0) : setIndex(index + 1))
   }
 
 
@@ -37,8 +42,8 @@ function App() {
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
       <PriceLow redirect={redirect} roundNum={roundNum} />
-        <PriceMed />
-        <RatingSteam />
+      <PriceMed />
+      <RatingSteam />
       <Footer />
     </div>
   );
