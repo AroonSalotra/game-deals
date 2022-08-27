@@ -24,8 +24,8 @@ const Rating = ({ redirect, roundNum }) => {
                             <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`} className="game-img" alt={title} />
                             {/* <p className="game-title">{title}</p> */}
                             <ul className="price">
-                                <li className="sale-price">{salePrice}</li>
-                                <li className="normal-price">{normalPrice}</li>
+                                <li className="sale-price">${salePrice}</li>
+                                <li className="normal-price">${normalPrice}</li>
                                 {/* <li className="score">{metacriticScore}</li> */}
                             </ul>
                             <p className="discount">-{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>

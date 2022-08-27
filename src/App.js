@@ -38,7 +38,7 @@ function App() {
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <div className='container-group'>
         <Featured redirect={redirect} roundNum={roundNum} />
-        <Recent redirect={redirect} />
+        {/* <Recent redirect={redirect} /> */}
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
       <PriceLow redirect={redirect} roundNum={roundNum} />

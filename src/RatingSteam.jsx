@@ -2,7 +2,7 @@ import useGetAPI from "./useGetAPI";
 
 const RatingSteam = () => {
 
-    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=20&steamRating=80", 4)
+    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=20&steamRating=80", 5)
 
 
 
