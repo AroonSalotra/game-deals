@@ -23,7 +23,9 @@ const PriceMed = () => {
                             className="game-img" alt={title} />
                         <div className="price">
                             <p className="sale-price">${salePrice}</p>
-                            <p className="normal-price">${normalPrice}</p>
+                            {/* <p className="normal-price">${normalPrice}</p> */}
+                            <p className="normal-price">{salePrice === normalPrice ? null : normalPrice}</p>
+
                         </div>
 
                         {/* </a> */}

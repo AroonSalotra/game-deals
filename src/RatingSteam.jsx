@@ -1,9 +1,18 @@
+import { useState } from "react";
 import useGetAPI from "./useGetAPI";
+import { GrNext, GrFormNext } from "react-icons/gr"
+
 
 const RatingSteam = () => {
 
-    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=20&steamRating=80", 5)
+    const [index, setIndex] = useState(0)
 
+
+    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=20&steamRating=80&pageNumber=${index}`, 5)
+
+    const handlePageIndex = () => {
+        (index > 2 ? setIndex(0) : setIndex(index + 1))
+    }
 
 
     return (
@@ -17,13 +26,16 @@ const RatingSteam = () => {
                             className="game-img" alt={title} />
                         <div className="price">
                             <p className="sale-price">${salePrice}</p>
-                            <p className="normal-price">${normalPrice}</p>
+                            <p className="normal-price">{salePrice === normalPrice ? null : normalPrice}</p>
+                            {/* <p>{salePrice === normalPrice ? salePrice}</p> */}
                         </div>
                         <p className="rating">{steamRatingPercent}%</p>
                         {/* </a> */}
                     </div>
                 })
                     : null}
+                <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
+
             </div>
         </div>
     );
