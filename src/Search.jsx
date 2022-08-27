@@ -84,7 +84,7 @@ const Search = ({ link, redirect }) => {
                             {/* <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`} className="game-img" alt={title} /> */}
                             {/* <p className="score">{metacriticScore}</p> */}
                             {/* {isOnSale === "0" ? <p>{normalPrice}</p> :} */}
-                            <p className="sale-price">${isOnSale === "0" ? normalPrice : salePrice}</p>
+                            <p className="sale-price search-price">${isOnSale === "0" ? normalPrice : salePrice}</p>
                         </a>
                     </div>
                 })

@@ -18,7 +18,7 @@ const PriceLow = ({ redirect, roundNum }) => {
                                 <p className="sale-price">${salePrice}</p>
                                 <p className="normal-price">${normalPrice}</p>
                             </div>
-                            <p className="discount">{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>
+                            <p className="discount">-{roundNum(savings) > 0 ? roundNum(savings) + "%" : null}</p>
                         </a>
                     </div>
 

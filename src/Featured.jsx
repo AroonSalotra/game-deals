@@ -33,7 +33,7 @@ const Featured = ({ redirect, roundNum }) => {
                         <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
                             alt="" className="featured-img" />
                     </a>
-                    <p className="featured-discount">{roundNum(data[index].savings)}%</p>
+                    <p className="featured-discount">-{roundNum(data[index].savings)}%</p>
                 </div>
                     : null}
                 <div className="featured-btns">
