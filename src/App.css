@@ -190,18 +190,16 @@ ul {
   max-width: fit-content;
   position: absolute;
   left: 50%;
-  transform: translate(-33%, 0rem);
+  transform: translate(-55%, 0.5rem);
   background: rgb(105, 101, 101);
   z-index: 10;
   overflow-y: auto;
   max-height: 50rem;
-  border: 10px solid var(--clr-d);
-  border-top: none;
-  border-radius: 10px;
+  border-bottom: 5px solid var(--clr-d);
 }
 
 .search-img {
-  height: 130px;
+  height: 80px;
 }
 
 
@@ -210,7 +208,7 @@ ul {
   font-size: 2rem;
   background: none;
   border: none;
-  transform: translate(22rem, 0.5rem);
+  transform: translate(31rem, 0.5rem);
 }
 
 .search-result:hover {
@@ -390,6 +388,10 @@ ul {
     max-width: fit-content;
   }
 
+  .search-title {
+    display: none;
+  }
+
   .search-img {
     height: 80px;
   }
@@ -399,7 +401,7 @@ ul {
   }
 
   #search {
-    width: 50%;
+    width: 100%;
   }
 
   .container-search {
