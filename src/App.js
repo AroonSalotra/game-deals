@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className='header'>
-        {/* <Header /> */}
+        <Header />
         <Search link={link} redirect={redirect} />
       </div>
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}

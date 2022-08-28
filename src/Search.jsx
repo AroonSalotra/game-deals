@@ -67,8 +67,8 @@ const Search = ({ link, redirect }) => {
         <>
             <div className="container-search">
                 {/* <p>{search.length}</p> */}
-                <p className="title title-small">Search</p>
                 <label onClick={() => handleClick()} className="input-search">
+                    <p className="title title-small search-title">Search</p>
                     <input ref={ref} id="search" autoComplete="off" autoFocus
                         type="text" value={search} onChange={(e) => handleChange(e)} />
                     <MdCancel onClick={() => clearSearch()}
