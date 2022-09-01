@@ -27,22 +27,15 @@ const Featured = ({ redirect, roundNum }) => {
     return (
         <>
             {/* <h2 className="title">Hottest Deals</h2> */}
-            <div className="featured-container anim">
+            <div className="featured-container fade">
                 {data ?
                     <div className="anim">
                         <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
                             <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
                                 alt="" className="featured-img" />
                         </a>
-                        <p className="featured-discount">-{roundNum(data[index].savings)}%</p>
-
-                        {/* {data.map(({thumb}) => {
-                            return <div>
-                                <img src={thumb}  alt="" />
-                            </div>
-
-                        })} */}
-
+                        <p className="featured-discount">{data[index].salePrice === data[index].normalPrice ? "Full Price" :
+                            "-" + roundNum(data[index].savings) + "%"}</p>
                     </div>
                     : null}
                 <div className="featured-btns">

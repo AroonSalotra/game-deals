@@ -6,7 +6,7 @@ const PriceMed = ({ redirect }) => {
 
     const [index, setIndex] = useState(0)
 
-    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=15&metacritic=1&pageNumber=${index}`, 5)
+    const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&lowerPrice=10&upperPrice=30&metacritic=1&pageNumber=${index}`, 5)
 
     const handlePageIndex = () => {
         (index > 2 ? setIndex(0) : setIndex(index + 1))
@@ -34,8 +34,8 @@ const PriceMed = ({ redirect }) => {
                     </div>
                 })
                     : null}
-
                 <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
+
             </div>
         </>
     );
