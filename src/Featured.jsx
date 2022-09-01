@@ -27,14 +27,23 @@ const Featured = ({ redirect, roundNum }) => {
     return (
         <>
             {/* <h2 className="title">Hottest Deals</h2> */}
-            <div className="featured-container">
-                {data ? <div>
-                    <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
-                        <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
-                            alt="" className="featured-img" />
-                    </a>
-                    <p className="featured-discount">-{roundNum(data[index].savings)}%</p>
-                </div>
+            <div className="featured-container anim">
+                {data ?
+                    <div className="anim">
+                        <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
+                            <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
+                                alt="" className="featured-img" />
+                        </a>
+                        <p className="featured-discount">-{roundNum(data[index].savings)}%</p>
+
+                        {/* {data.map(({thumb}) => {
+                            return <div>
+                                <img src={thumb}  alt="" />
+                            </div>
+
+                        })} */}
+
+                    </div>
                     : null}
                 <div className="featured-btns">
                     <IoIosArrowBack id="prev" onClick={(e) => changeIndex(e)} />

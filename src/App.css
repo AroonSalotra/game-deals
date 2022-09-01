@@ -28,6 +28,7 @@ ul {
 .App {
   text-align: center;
   background: var(--clr-c);
+  /* background: rgb(27, 27, 27); */
   box-shadow: 0 10px 20px 0 var(--clr-d);
 }
 
@@ -62,8 +63,6 @@ ul {
   background: var(--clr-a);
 }
 
-
-
 .header-icon {}
 
 .header-title {
@@ -75,6 +74,18 @@ ul {
 .header-content {
   position: absolute;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.anim {
+  /* transition: all 1s ease;
+  animation: fade 1s; */
+  opacity: 1;
+  transition: all 1s ease-out;
+}
+
+.anim:active {
+  opacity: 0.4;
+  transition-duration: 0.1s;
 }
 
 .title {
