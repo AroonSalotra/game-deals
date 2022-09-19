@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/game-deals/static/css/main.ec773197.css",
-    "main.js": "/game-deals/static/js/main.7f40d08e.js",
+    "main.css": "/game-deals/static/css/main.3c35dd90.css",
+    "main.js": "/game-deals/static/js/main.0f2c6433.js",
     "static/js/787.9883bd64.chunk.js": "/game-deals/static/js/787.9883bd64.chunk.js",
     "static/media/logo.svg": "/game-deals/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/game-deals/index.html",
-    "main.ec773197.css.map": "/game-deals/static/css/main.ec773197.css.map",
-    "main.7f40d08e.js.map": "/game-deals/static/js/main.7f40d08e.js.map",
+    "main.3c35dd90.css.map": "/game-deals/static/css/main.3c35dd90.css.map",
+    "main.0f2c6433.js.map": "/game-deals/static/js/main.0f2c6433.js.map",
     "787.9883bd64.chunk.js.map": "/game-deals/static/js/787.9883bd64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec773197.css",
-    "static/js/main.7f40d08e.js"
+    "static/css/main.3c35dd90.css",
+    "static/js/main.0f2c6433.js"
   ]
 }
