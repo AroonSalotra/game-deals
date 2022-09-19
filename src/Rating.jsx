@@ -1,11 +1,11 @@
 import useGetAPI from "./useGetAPI";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 
 
 const Rating = ({ redirect, roundNum }) => {
     const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=90`, 6)
-    console.log(data)
 
     // const roundNum = (target) => {
     //   return Number(target).toFixed(0)
@@ -30,7 +30,7 @@ const Rating = ({ redirect, roundNum }) => {
                     </div>
 
                 })
-                    : null}
+                    : <Loading />}
             </div>
         </>
     );

@@ -1,6 +1,7 @@
 import useGetAPI from "./useGetAPI";
 import { useState } from "react";
 import { GrNext, GrFormNext } from "react-icons/gr"
+import Loading from "./Loading";
 
 const PriceMed = ({ redirect }) => {
 
@@ -33,7 +34,7 @@ const PriceMed = ({ redirect }) => {
                         </a>
                     </div>
                 })
-                    : null}
+                    : <Loading/>}
                 <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
 
             </div>

@@ -1,15 +1,13 @@
 import useGetAPI from "./useGetAPI";
 import { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
+import Loading from "./Loading";
 
 const Featured = ({ redirect, roundNum }) => {
     const [index, setIndex] = useState(0)
 
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&metacritic=90&steamRating=90&onSale=true", 3)
     console.log(data)
-    // console.log(data[0].steamAppID)
-
-    // (data ? setIndex(data.length) : null)
 
     const changeIndex = (e) => {
 
@@ -19,10 +17,6 @@ const Featured = ({ redirect, roundNum }) => {
             (index === data.length - 1 ? setIndex(0) : setIndex(index + 1))
         }
     }
-
-
-    // <img src={data[index].thumb} alt="" className="featured-img" />
-
 
     return (
         <>
@@ -37,7 +31,7 @@ const Featured = ({ redirect, roundNum }) => {
                         <p className="featured-discount">{data[index].salePrice === data[index].normalPrice ? "Full Price" :
                             "-" + roundNum(data[index].savings) + "%"}</p>
                     </div>
-                    : null}
+                    : <Loading />}
                 <div className="featured-btns">
                     <IoIosArrowBack id="prev" onClick={(e) => changeIndex(e)} />
                     <IoIosArrowForward id="next" onClick={(e) => changeIndex(e)} />

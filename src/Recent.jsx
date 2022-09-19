@@ -1,3 +1,4 @@
+import Loading from "./Loading";
 import useGetAPI from "./useGetAPI";
 
 const Recent = ({ redirect }) => {
@@ -21,7 +22,7 @@ const Recent = ({ redirect }) => {
                         </a>
                     </div>
                 })
-                    : null}
+                    : <Loading/>}
             </div>
         </>
     );

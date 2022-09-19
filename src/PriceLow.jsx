@@ -1,3 +1,4 @@
+import Loading from "./Loading";
 import useGetAPI from "./useGetAPI";
 
 const PriceLow = ({ redirect, roundNum }) => {
@@ -20,7 +21,7 @@ const PriceLow = ({ redirect, roundNum }) => {
                     </div>
 
                 })
-                    : null}
+                    : <Loading />}
             </div>
         </>
     );

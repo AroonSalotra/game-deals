@@ -11,6 +11,7 @@ import Featured from './Featured';
 import PriceMed from './PriceMed';
 import RatingSteam from './RatingSteam';
 import Footer from './Footer';
+import Loading from './Loading';
 
 function App() {
   const [index, setIndex] = useState(0)
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       <div className='header'>
         <Header />
+        {/* <Loading /> */}
         <Search link={link} redirect={redirect} />
       </div>
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
