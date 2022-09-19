@@ -44,8 +44,6 @@ const Search = ({ link, redirect }) => {
         setUrl("")
     }
 
-
-
     useEffect(() => {
         const target = ref.current;
 
@@ -70,7 +68,9 @@ const Search = ({ link, redirect }) => {
                 <label onClick={() => handleClick()} className="input-search">
                     <p className="title title-small search-title">Search</p>
                     <input ref={ref} id="search" autoComplete="off" autoFocus
-                        type="text" value={search} onChange={(e) => handleChange(e)} />
+                        type="text" value={search} onChange={(e) => handleChange(e)}
+                        placeholder="Search for a game"
+                    />
                     <MdCancel onClick={() => clearSearch()}
                         className={`search-btn ${cancel}`} />
                 </label>

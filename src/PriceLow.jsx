@@ -6,7 +6,7 @@ const PriceLow = ({ redirect, roundNum }) => {
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&metacritic=1", 12)
     return (
         <>
-            <h2 className="title">Bargains (under $5)</h2>
+            <h2 className="title">Bargains (under $10)</h2>
             <div className="container-game">
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
                     return <div key={gameID} className="game-card medium">

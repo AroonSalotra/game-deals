@@ -6,7 +6,6 @@ const Recent = ({ redirect }) => {
     console.log(data)
     return (
         <>
-            {/* <h2>Recent Releases</h2> */}
             <div className="container-game-grid">
                 <h2 className="title title-extra-small">Recent Releases</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID }) => {
