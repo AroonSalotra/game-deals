@@ -2,12 +2,13 @@ import useGetAPI from "./useGetAPI";
 import { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 import Loading from "./Loading";
+import Carousel from "./Carousel";
 
 const Featured = ({ redirect, roundNum }) => {
     const [index, setIndex] = useState(0)
 
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&metacritic=90&steamRating=90&onSale=true", 3)
-    console.log(data)
+    // console.log(data)
 
     const changeIndex = (e) => {
 
@@ -21,8 +22,8 @@ const Featured = ({ redirect, roundNum }) => {
     return (
         <>
             {/* <h2 className="title">Hottest Deals</h2> */}
-            <div className="featured-container fade">
-                {data ?
+            <div className="featured-container">
+                {/* {data ?
                     <div className="anim">
                         <a href={`${redirect}${data[index].dealID}`} target={"_blank"} rel="noreferrer">
                             <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${data[index].steamAppID}/header.jpg?t=1660827879`}
@@ -31,11 +32,14 @@ const Featured = ({ redirect, roundNum }) => {
                         <p className="featured-discount">{data[index].salePrice === data[index].normalPrice ? "Full Price" :
                             "-" + roundNum(data[index].savings) + "%"}</p>
                     </div>
-                    : <Loading />}
-                <div className="featured-btns">
+                    :
+                    <Loading />} */}
+
+                <Carousel />
+                {/* <div className="featured-btns">
                     <IoIosArrowBack id="prev" onClick={(e) => changeIndex(e)} />
                     <IoIosArrowForward id="next" onClick={(e) => changeIndex(e)} />
-                </div>
+                </div> */}
             </div>
         </>
     );

@@ -7,11 +7,6 @@ import Loading from "./Loading";
 const Rating = ({ redirect, roundNum }) => {
     const { data } = useGetAPI(`https://www.cheapshark.com/api/1.0/deals?storeID=1&metacritic=90`, 6)
 
-    // const roundNum = (target) => {
-    //   return Number(target).toFixed(0)
-    // }
-
-
     return (
         <>
             <h2 className="title">Highest Rated</h2>
@@ -25,7 +20,9 @@ const Rating = ({ redirect, roundNum }) => {
                                 <li className="sale-price">${salePrice}</li>
                                 <li className="normal-price">${normalPrice}</li>
                             </ul>
-                            <p className="discount">{roundNum(savings) > 0 ? "-" + roundNum(savings) + "%" : null}</p>
+                            <p className="discount">
+                                {roundNum(savings) > 0 ? "-" + roundNum(savings) + "%" : null}
+                            </p>
                         </a>
                     </div>
 

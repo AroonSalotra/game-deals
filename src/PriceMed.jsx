@@ -15,8 +15,8 @@ const PriceMed = ({ redirect }) => {
 
     return (
         <>
+            <h2 className="title small">Games under $30</h2>
             <div className="container-row bg">
-                <h2 className="title title-small">Games under $30</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
                     return <div key={gameID} className="game-card">
                         <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer">
@@ -34,7 +34,7 @@ const PriceMed = ({ redirect }) => {
                         </a>
                     </div>
                 })
-                    : <Loading/>}
+                    : <Loading />}
                 <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
 
             </div>
