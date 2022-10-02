@@ -12,12 +12,6 @@ const Recent = ({ redirect }) => {
                     return <div key={gameID} className="game-card small">
                         <a href={`${redirect}${dealID}`} target={"_blank"}>
                             <img src={thumb} className="game-img" alt="" />
-                            {/* <p className="game-title">{title}</p> */}
-                            {/* <p className="score">{metacriticScore}</p> */}
-                            <div className="price">
-                                {/* <p className="sale-price">${salePrice}</p> */}
-                                {/* <p className="sale-price">${normalPrice}</p> */}
-                            </div>
                         </a>
                     </div>
                 })

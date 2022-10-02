@@ -286,6 +286,12 @@ ul {
   height: 80px;
 }
 
+.search-img {
+  width: auto;
+  width: 200px;
+  /* height: 100px; */
+}
+
 .small {
   transform: scale(0.8);
 }

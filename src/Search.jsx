@@ -80,11 +80,19 @@ const Search = ({ link, redirect }) => {
                 {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice, steamAppID }) => {
                     return <div key={gameID} className="search-result">
                         <a href={`${redirect}${dealID}`} target="_blank" rel="noreferrer">
-                            <img src={thumb} className="search-img" alt="" />
-                            {/* <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`} className="game-img" alt={title} /> */}
+                            {/* <img src={thumb} className="search-img" alt="" /> */}
+                            <img
+                                onError={(e) => {
+                                    e.target.src = thumb
+                                }}
+                                src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
+                                className="search-img"
+                                alt={title} />
                             {/* <p className="score">{metacriticScore}</p> */}
                             {/* {isOnSale === "0" ? <p>{normalPrice}</p> :} */}
-                            <p className="sale-price search-price">${isOnSale === "0" ? normalPrice : salePrice}</p>
+                            <p className="sale-price search-price">
+                                ${isOnSale === "0" ? normalPrice : salePrice}
+                            </p>
                         </a>
                     </div>
                 })
