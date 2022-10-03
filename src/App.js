@@ -44,8 +44,10 @@ function App() {
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
       <PriceLow redirect={redirect} roundNum={roundNum} />
-      <PriceMed handlePageIndex={handlePageIndex} redirect={redirect} />
-      <RatingSteam redirect={redirect} />
+      <div className="bg-dark">
+        <PriceMed handlePageIndex={handlePageIndex} redirect={redirect} />
+        <RatingSteam redirect={redirect} />
+      </div>
       <Footer />
     </div>
   );

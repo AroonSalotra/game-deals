@@ -7,7 +7,8 @@ const Recent = ({ redirect }) => {
     return (
         <>
             <div className="container-game-grid">
-                <h2 className="title-small">Recent Releases</h2>
+                <h2 className="title title-small"
+                    style={{ height: "2rem" }}>Upcoming</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID }) => {
                     return <div key={gameID} className="game-card">
                         <a href={`${redirect}${dealID}`} target={"_blank"}>
@@ -15,7 +16,7 @@ const Recent = ({ redirect }) => {
                         </a>
                     </div>
                 })
-                    : <Loading/>}
+                    : <Loading />}
             </div>
         </>
     );

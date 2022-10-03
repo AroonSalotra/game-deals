@@ -14,7 +14,10 @@ const Rating = ({ redirect, roundNum }) => {
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
                     return <div key={gameID} className="game-card medium">
                         <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer">
-                            <img src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
+                            <img onError={(e) => {
+                                e.target.src = thumb;
+                            }}
+                                src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
                                 className="game-img" alt={title} />
                             <ul className="price">
                                 <li className="sale-price">${salePrice}</li>

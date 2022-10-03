@@ -66,7 +66,7 @@ const Search = ({ link, redirect }) => {
             <div className="container-search">
                 {/* <p>{search.length}</p> */}
                 <label onClick={() => handleClick()} className="input-search">
-                    <p className="title title-small search-title">Search</p>
+                    <p className="title search-title">Search</p>
                     <input ref={ref} id="search" autoComplete="off" autoFocus
                         type="text" value={search} onChange={(e) => handleChange(e)}
                         placeholder="Search for a game"

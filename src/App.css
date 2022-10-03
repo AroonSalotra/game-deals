@@ -10,12 +10,12 @@
   --clr-a: #C3CEDA;
   --clr-b: #738FA7;
   --clr-c: #0C4160;
-  /* --clr-d: #272949; */
+  --clr-d: #272949;
 }
 
 body {
   background: var(--clr-c);
-  background: rgb(136, 136, 161);
+  /* background: rgb(136, 136, 161); */
 }
 
 a {
@@ -106,7 +106,7 @@ ul {
   overflow: hidden;
   will-change: transform;
   transition: transform 1s ease;
-  border: 2px solid white;
+  /* border: 2px solid white; */
 }
 
 .carousel-content {
@@ -114,7 +114,7 @@ ul {
   justify-content: center;
   overflow: visible;
   transition: transform 1s ease;
-  border: 10px dotted blue;
+  /* border: 10px dotted blue; */
 }
 
 .header-title-split {}
@@ -136,6 +136,10 @@ ul {
   transition-duration: 0.1s;
 }
 
+.bg-dark {
+  background: var(--clr-d);
+}
+
 .title {
   font-weight: 800;
   font-size: 2.5rem;
@@ -145,8 +149,8 @@ ul {
   text-transform: uppercase;
   /* box-shadow: 5px 5px rgb(104, 100, 100); */
   filter: hue-rotate(280deg);
-  max-width: 80rem;
-  margin: auto;
+  /* max-width: 80rem; */
+  /* margin: auto; */
   padding: 0 8px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,10 +158,13 @@ ul {
 }
 
 .title-small {
-  width: fit-content;
-  font-size: 2rem;
-  height: fit-content;
+  /* width: fit-content; */
+  width: 12rem;
+  font-size: 1.5rem;
+  /* height: fit-content; */
+  height: 5rem;
   color: white;
+  text-align: left;
 }
 
 .title-extra-small {
@@ -315,6 +322,7 @@ ul {
 
 .game-img {
   width: auto;
+  width: 171.15px;
   height: 80px;
 }
 
