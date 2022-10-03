@@ -27,6 +27,33 @@ ul {
   list-style: none;
 }
 
+header {
+  /* background: var(--clr-c); */
+  text-align: left;
+  padding-left: 5rem;
+  display: flex;
+}
+
+header p {
+
+}
+
+header > ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+header > li {
+  border: 2px solid black;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+}
+
 .App {
   text-align: center;
   background: var(--clr-c);
@@ -150,12 +177,7 @@ ul {
   transition: transform 600ms ease;
 }
 
-.header-title-split {}
 
-.header-content {
-  position: absolute;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 .fade {
   /* transition: all 1s ease;
@@ -213,12 +235,7 @@ ul {
   row-gap: 4rem;
 }
 
-.container-search {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 0.5rem;
-  /* gap: 1rem; */
-}
+
 
 .container-row {
   display: flex;
@@ -273,28 +290,49 @@ ul {
 }
 
 .input-search {
-  display: flex;
+  /* display: flex; */
+}
+
+.container-search {
+  /* display: flex;
+  justify-content: center; */
+  /* padding-bottom: 0.5rem; */
+  /* gap: 1rem; */
+  margin: auto;
 }
 
 .search-title {
   box-shadow: none;
 }
 
-.search-content {
-  width: fit-content;
-  max-width: fit-content;
+.search-wrapper {
+  /* width: fit-content; */
+  /* max-width: fit-content; */
+  /* width: 320px; */
+  padding: 10px 40px;
   position: absolute;
+  /* padding: 0 20px; */
   left: 55%;
-  transform: translate(-50%, 1rem);
-  background: rgb(105, 101, 101);
+  transform: translate(-79%, 3px);
+  background: rgb(219, 216, 216);
+  border: 2px solid black;
+  /* border-bottom: 5px solid var(--clr-d); */
   z-index: 10;
-  overflow-y: auto;
   max-height: 50rem;
-  border-bottom: 5px solid var(--clr-d);
+  overflow-y: auto;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .search-img {
-  height: 80px;
+  /* height: 80px; */
+  width: 250px !important;
+  height: auto !important;
+  /* object-fit: cover !important; */
 }
 
 .search-btn {
@@ -309,23 +347,39 @@ ul {
 
 #search {
   font-size: 1.5rem;
-  width: 15rem;
-  padding: 2px;
-  padding-left: 1rem;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  padding: 10px 30px;
+  max-width: 30rem;
+  transform: translateX(-10rem);
   transition: all 350ms;
   border: none;
-  /* width: 25rem; */
+  /* border-radius: 30px; */
 }
 
 #search:focus {
-  border-radius: 0px;
-  transition: all 550ms;
+  /* border-radius: 0px;
+  transition: all 550ms; */
+}
+
+.flex-row {
+  display: flex;
+  gap: 5px;
+  padding-top: 0.5rem;
+}
+
+.search-discount {
+  color: white;
+  background: rgb(165, 50, 50);
+  height: fit-content;
+  font-size: 1rem;
+  padding: 1px 8px;
 }
 
 .search-price {
   background: var(--clr-b);
+  background: rgba(117, 113, 113, 0.411);
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
 }
 
 .game-card {

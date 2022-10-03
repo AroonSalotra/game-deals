@@ -33,9 +33,9 @@ function App() {
   return (
     <div className="App">
       <div className='header'>
-        <Header />
+        <Header link={link} redirect={redirect} />
         {/* <Loading /> */}
-        <Search link={link} redirect={redirect} />
+        {/* <Search link={link} redirect={redirect} /> */}
       </div>
       {/* <Search setSearch={setSearch} search={search} setDisplay={setDisplay} display={display} /> */}
       <div className='container-group'>

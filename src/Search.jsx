@@ -66,37 +66,52 @@ const Search = ({ link, redirect }) => {
             <div className="container-search">
                 {/* <p>{search.length}</p> */}
                 <label onClick={() => handleClick()} className="input-search">
-                    <p className="title search-title">Search</p>
+                    {/* <p className="title search-title">Search</p> */}
                     <input ref={ref} id="search" autoComplete="off" autoFocus
                         type="text" value={search} onChange={(e) => handleChange(e)}
                         placeholder="Search for a game"
                     />
-                    <MdCancel onClick={() => clearSearch()}
-                        className={`search-btn ${cancel}`} />
+                    {/* <MdCancel onClick={() => clearSearch()}
+                        className={`search-btn ${cancel}`} /> */}
                 </label>
-            </div>
 
-            <div className={`${display} search-content`}>
-                {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice, steamAppID }) => {
-                    return <div key={gameID} className="search-result">
-                        <a href={`${redirect}${dealID}`} target="_blank" rel="noreferrer">
-                            {/* <img src={thumb} className="search-img" alt="" /> */}
-                            <img
-                                onError={(e) => {
-                                    e.target.src = thumb
-                                }}
-                                src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
-                                className="search-img"
-                                alt={title} />
-                            {/* <p className="score">{metacriticScore}</p> */}
-                            {/* {isOnSale === "0" ? <p>{normalPrice}</p> :} */}
-                            <p className="sale-price search-price">
-                                ${isOnSale === "0" ? normalPrice : salePrice}
-                            </p>
-                        </a>
+                <div className={`${display} search-wrapper`}>
+                    <div className="search-content">
+                        {data !== null && typeof (data) !== "string" ? data.map(({ title, metacriticScore, thumb, gameID, dealID, isOnSale, normalPrice, salePrice, steamAppID, savings }) => {
+                            return <div key={gameID} className="search-result">
+                                <a href={`${redirect}${dealID}`} target="_blank" rel="noreferrer">
+                                    {/* <img src={thumb} className="search-img" alt="" /> */}
+                                    <img
+                                        onError={(e) => {
+                                            e.target.src = thumb
+                                        }}
+                                        src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
+                                        className="search-img"
+                                        alt={title} />
+                                    {/* <p className="sale-price search-price">
+                                        ${isOnSale === "0" ? normalPrice : salePrice}
+                                    </p> */}
+                                    {isOnSale === "1" ?
+                                        <ul className="search-price">
+                                            <li className="sale-price">${salePrice}</li>
+                                            {/* <span className="flex-row"> */}
+                                                <li className="normal-price">${normalPrice}</li>
+                                                {/* <li className="search-discount">{`-${Math.floor(savings)}%`}</li> */}
+                                            {/* </span> */}
+                                        </ul>
+                                        :
+                                        <p className="search-price sale-price">{normalPrice}</p>
+                                    }
+
+
+                                    {/* <p>{savings > 0 ? `${Math.floor(savings)}` : null }</p> */}
+                                    {/* <p>{salePrice === normalPrice ? null : salePrice}</p> */}
+                                </a>
+                            </div>
+                        })
+                            : null}
                     </div>
-                })
-                    : null}
+                </div>
             </div>
 
         </>

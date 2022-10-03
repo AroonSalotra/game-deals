@@ -11,6 +11,8 @@ const Carousel = (props) => {
     const [link, setLink] = useState(null)
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&metacritic=70&steamRating=70&onSale=true", 3)
 
+    console.log(data)
+
 
     useEffect(() => {
         var nextIndex = 0;
