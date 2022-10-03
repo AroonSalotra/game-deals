@@ -117,6 +117,39 @@ ul {
   /* border: 10px dotted blue; */
 }
 
+.carousel-btns button {
+  width: 4rem;
+  height: 3rem;
+  background: none;
+  border: none;
+}
+
+.btn-icon {
+  font-size: 3rem;
+}
+
+#prev, #next {
+  cursor: pointer;
+}
+
+#prev:hover, #next:hover {
+  color: white;
+}
+
+#prev:active, #next:active {
+  /* color: white; */
+  transform: scale(1.1);
+}
+
+.carousel-content div {
+  transition: transform 200ms ease;
+}
+
+.carousel-content div:hover {
+  transform: scale(1.05);
+  transition: transform 600ms ease;
+}
+
 .header-title-split {}
 
 .header-content {
@@ -151,6 +184,7 @@ ul {
   filter: hue-rotate(280deg);
   /* max-width: 80rem; */
   /* margin: auto; */
+  word-wrap: break-word;
   padding: 0 8px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -227,13 +261,7 @@ ul {
   color: var(--clr-b);
 }
 
-#prev, #next {
-  cursor: pointer;
-}
 
-#prev:active, #next:active {
-  color: white;
-}
 
 .featured-img {
   /* width: 100%; */
@@ -274,7 +302,7 @@ ul {
   font-size: 2rem;
   background: none;
   border: none;
-  transform: translate(21rem, 0.5rem);
+  transform: translate(23rem, 0.75rem);
 }
 
 .search-result:hover {}
