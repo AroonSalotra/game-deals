@@ -12,6 +12,7 @@ import PriceMed from './PriceMed';
 import RatingSteam from './RatingSteam';
 import Footer from './Footer';
 import Loading from './Loading';
+import Background from './Background';
 
 function App() {
   const [index, setIndex] = useState(0)
@@ -49,6 +50,7 @@ function App() {
         <RatingSteam redirect={redirect} />
       </div>
       <Footer />
+      {/* <Background /> */}
     </div>
   );
 }

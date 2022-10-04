@@ -12,8 +12,10 @@ const Header = ({ link, redirect }) => {
                 <li>Up to date</li>
             </ul> */}
             <div>
-                <h1>Dealio</h1>
-                <p>Powered by Cheapshark API</p>
+                {/* <h1>Deal-io</h1>
+                <p>Powered by Cheapshark API</p> */}
+                <h1>{`{ Deal-io`}</h1>
+                <p>{`Powered by Cheapshark API }`}</p>
             </div>
             <Search link={link} redirect={redirect} />
         </header>

@@ -43,36 +43,35 @@ const Carousel = (props) => {
         const target = e.target.id
         switch (index) {
             case 0:
-                return target === "prev" ? setIndex(100) : setIndex(-100)
+                target === "prev" ? setIndex(100) : setIndex(-100)
                 break;
             case 100:
                 // setIndex(-100)
-                return target === "prev" ? setIndex(-100) : setIndex(0)
+                target === "prev" ? setIndex(-100) : setIndex(0)
                 break;
             case -100:
                 // setIndex(0)
-                return target === "prev" ? setIndex(0) : setIndex(100)
-
+                target === "prev" ? setIndex(0) : setIndex(100)
                 break;
             default:
                 return undefined;
         }
-    }
-
-    const NEXT = () => {
-        if (index === 0) setIndex(100)
+        // console.log(target)
     }
 
 
     return (
         <>
             <div className="carousel-wrapper" >
+                <p style={{ color: "white" }} >{index}</p>
                 <div className="carousel-content"
                     style={{ transform: `translateX(${index}%)` }}>
                     {data ?
                         data.map(({ thumb, steamAppID, salePrice, savings, dealID, title }) => {
                             return <div>
-                                <a href={`${redirect}${dealID}`} target="_blank" rel="noreferrer">
+                                <a href={`${redirect}${dealID}`}
+                                    target="_blank"
+                                    rel="noreferrer">
                                     <img
                                         src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
                                         className="featured-img"
@@ -85,18 +84,16 @@ const Carousel = (props) => {
                         })
                         : null}
                 </div>
-                {/* <h1>{index}</h1>
-                 */}
-                <div className="carousel-btns">
-                    <button onClick={(e) => changeSlide(e)}
-                        id="prev">
-                        <IoIosArrowBack className="btn-icon" />
-                    </button>
-                    <button onClick={(e) => changeSlide(e)}
-                        id="next">
-                        <IoIosArrowForward className="btn-icon" />
-                    </button>
-                </div>
+            </div>
+
+            <div className="carousel-btns">
+                <button onClick={(e) => changeSlide(e)} >
+                    <IoIosArrowBack className="btn-icon" id="prev" />
+                </button>
+                <button onClick={(e) => changeSlide(e)}
+                    id="next">
+                    <IoIosArrowForward className="btn-icon" />
+                </button>
             </div>
         </>
     );

@@ -1,6 +1,7 @@
 import useGetAPI from "./useGetAPI";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import Break from "./Break";
 
 
 
@@ -9,10 +10,11 @@ const Rating = ({ redirect, roundNum }) => {
 
     return (
         <>
+            {/* <Break /> */}
             <h2 className="title">Highest Rated</h2>
             <div className="container-game bg">
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
-                    return <div key={gameID} className="game-card medium">
+                    return <div key={gameID} className="game-card">
                         <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer">
                             <img onError={(e) => {
                                 e.target.src = thumb;
