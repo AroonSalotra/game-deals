@@ -23,7 +23,8 @@
 }
 
 body {
-  background: rgb(2, 2, 2);
+  /* background: rgb(2, 2, 2); */
+  background: rgb(117, 123, 156);
 }
 
 a {
@@ -220,9 +221,10 @@ header>li {
   word-wrap: break-word;
   padding: 0 30px;
   background: var(--clr-accent);
-  width: fit-content;
+  /* width: fit-content; */
+  max-width: 80rem;
   color: white;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -235,13 +237,16 @@ header>li {
   /* height: 5rem; */
   color: white;
   /* text-align: left; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 
 }
 
 .align {
-  transform: translateX(13rem);
+  /* transform: translateX(13rem); */
   /* margin-top: 1.5rem; */
+  margin: auto;
 }
 
 .break-container {
@@ -259,9 +264,7 @@ header>li {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #0ABFBC, #FC354C);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
-
 
 .title-extra-small {
   font-size: 1.4rem;
@@ -270,6 +273,7 @@ header>li {
 .wrapper-column {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8rem;
 }
 
@@ -278,18 +282,31 @@ header>li {
   display: grid;
   grid-template-columns: repeat(6, 13rem);
   justify-content: center;
-  row-gap: 7rem;
-  background: rgb(187, 183, 183);
-
+  row-gap: 5rem;
+  /* background: rgb(187, 183, 183); */
 }
 
 .container-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   /* flex-wrap: wrap; */
   gap: 1rem;
-  padding: 3rem 4rem;
+  padding: 0rem 2.5rem;
+  /* transform: translateY(8rem); */
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  /* border: 2px solid black; */
+  background: rgba(56, 51, 51, 0.13);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 10px solid var(--clr-accent);
+  border-bottom: 5px solid var(--clr-accent);
+  /* background: #FC354C;
+  background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+  background: linear-gradient(to right, #0ABFBC, #FC354C); */
+  /* height: 60rem; */
 }
 
 .container-group {
@@ -318,7 +335,7 @@ header>li {
 }
 
 .bg {
-  background: var(--clr-d);
+  /* background: var(--clr-d); */
 }
 
 .container-game-grid {
@@ -504,7 +521,8 @@ header>li {
 
 .discount {
   font-size: 1.7rem;
-  color: var(--clr-a);
+  /* color: var(--clr-a); */
+  color: white;
   background: rgb(197, 63, 63);
   width: fit-content;
   font-weight: 700;
@@ -562,7 +580,9 @@ header>li {
   background: black;
   font-size: 1.3rem;
   color: var(--clr-a);
-  padding: 1rem;
+  color: white;
+  margin-top: 5rem;
+  /* padding: 1rem; */
 }
 
 .min-width {}
