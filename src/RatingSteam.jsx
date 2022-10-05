@@ -45,7 +45,11 @@ const RatingSteam = ({ redirect }) => {
                     </div>
                 })
                     : <Loading />}
-                <GrFormNext className="icon-next" onClick={() => handlePageIndex()} />
+
+                <button className="icon-next">
+                    <GrFormNext
+                        onClick={() => handlePageIndex()} />
+                </button>
 
             </div>
         </>
