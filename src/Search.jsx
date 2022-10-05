@@ -95,8 +95,8 @@ const Search = ({ link, redirect }) => {
                                         <ul className="search-price">
                                             <li className="sale-price">${salePrice}</li>
                                             {/* <span className="flex-row"> */}
-                                                <li className="normal-price">${normalPrice}</li>
-                                                {/* <li className="search-discount">{`-${Math.floor(savings)}%`}</li> */}
+                                            <li className="normal-price">${normalPrice}</li>
+                                            {/* <li className="search-discount">{`-${Math.floor(savings)}%`}</li> */}
                                             {/* </span> */}
                                         </ul>
                                         :

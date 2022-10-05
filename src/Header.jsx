@@ -4,16 +4,7 @@ import Search from "./Search";
 const Header = ({ link, redirect }) => {
     return (
         <header>
-            {/* <ul>
-                <li>Powered by
-                    <span>Cheapshark API</span>
-                </li>
-                <li>100% Safe</li>
-                <li>Up to date</li>
-            </ul> */}
-            <div>
-                {/* <h1>Deal-io</h1>
-                <p>Powered by Cheapshark API</p> */}
+            <div className="page-title">
                 <h1>{`{ Deal-io`}</h1>
                 <p>{`Powered by Cheapshark API }`}</p>
             </div>
