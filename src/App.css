@@ -708,9 +708,13 @@ footer li {
     flex-wrap: wrap;
   }
 
+  .carousel-wrapper {
+    max-width: 100vw;
+  }
+
   .featured-container {
-    width: 100%;
-    margin: auto;
+    /* width: 100%; */
+    /* margin: auto; */
   }
 
   .featured-img {
@@ -726,22 +730,18 @@ footer li {
   .container-row {
     row-gap: 3rem;
   }
+
+  .wrapper-column {
+    gap: 0px;
+  }
 }
 
 @media(max-width: 540px) {
   .search-content {
-    /* max-height: 35rem;
-    overflow-y: auto;
-    transform: translate(0rem, 0rem);
-    left: 0;
-    max-width: fit-content; */
     max-width: fit-content;
     padding: 0 0.5rem;
   }
 
-  .page-title {
-    /* display: none; */
-  }
 
   .search-title {
     display: none;
@@ -751,11 +751,21 @@ footer li {
     height: 80px;
   }
 
-  .search-btn {
-    /* display: none; */
+
+  .featured-container {
+    padding: 0;
   }
 
-  .container-search {}
+  .featured-img {
+    /* height: auto; */
+    /* border: 5px solid red; */
+    /* height: fit-content;
+    height: 150px; */
+  }
+
+  a {
+    /* height: 400px; */
+  }
 
   .input-search {}
 
@@ -775,15 +785,30 @@ footer li {
     padding-left: 1rem;
   }
 
+  a {
+    /* height: 400px; */
+  }
+
+  .container-group {
+    gap: 0;
+    padding-bottom: 1rem;
+  }
+
   .featured-img {
     object-fit: contain;
     box-shadow: none;
+    height: fit-content;
+    padding-top: 1rem;
   }
 
   .featured-discount {
-    transform: translate(0rem, -7.5rem);
+    transform: translate(0rem, -2.95rem);
   }
 
+  .break {
+    display: none;
+
+  }
 }
 
 @media (max-width: 400px) {
@@ -794,11 +819,13 @@ footer li {
   .container-row {
     padding: 0;
     align-items: center;
-    padding-top: 4rem;
+    margin-top: 0rem;
+    /* padding-top: 4rem; */
   }
 
   .container-game {
-    padding: 4rem 0;
+    /* padding: 4rem 0; */
+    row-gap: 2.75rem;
   }
 
   .title {}
@@ -809,6 +836,10 @@ footer li {
 
   .search-content {
     padding-left: 0;
+  }
+
+  a {
+    /* height: 400px; */
   }
 
   .search-img {
@@ -843,11 +874,11 @@ footer li {
   }
 
   .featured-discount {
-    transform: translate(0rem, -9.2rem);
+    transform: translate(0rem, -3rem);
   }
 
   .title {
-    padding: 0;
+    /* padding: 5px; */
   }
 
   .rating {
@@ -855,8 +886,10 @@ footer li {
     transform: translate(0rem, 0rem);
   }
 
-  header {
-    height: 9rem;
+  .page-title {
+    /* word-wrap: break-word; */
+    /* height: 5rem; */
   }
+
 
 }

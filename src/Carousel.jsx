@@ -62,19 +62,17 @@ const Carousel = (props) => {
                     style={{ transform: `translateX(${index}%)` }}>
                     {data ?
                         data.map(({ thumb, steamAppID, salePrice, savings, dealID, title }) => {
-                            return <div>
-                                <a href={`${redirect}${dealID}`}
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <img
-                                        src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
-                                        className="featured-img"
-                                        alt={title} />
-                                    <p className="featured-discount">
-                                        {`-${Math.floor(savings)}%`}
-                                    </p>
-                                </a>
-                            </div>
+                            return <a href={`${redirect}${dealID}`}
+                                target="_blank"
+                                rel="noreferrer">
+                                <img
+                                    src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
+                                    className="featured-img"
+                                    alt={title} />
+                                <p className="featured-discount">
+                                    {`-${Math.floor(savings)}%`}
+                                </p>
+                            </a>
                         })
                         : null}
                 </div>
