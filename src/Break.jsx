@@ -1,7 +1,7 @@
 const Break = () => {
     return (
-        <div className="break">
-
+        <div className="break-container">
+            <div className="break" />
         </div>
     );
 }

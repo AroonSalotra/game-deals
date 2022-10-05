@@ -9,7 +9,7 @@ const Carousel = (props) => {
     const { redirect } = props;
     const [index, setIndex] = useState(0)
     const [link, setLink] = useState(null)
-    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&metacritic=70&steamRating=70&onSale=true", 3)
+    const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&onSale=true", 3)
 
     console.log(data)
 
@@ -38,25 +38,20 @@ const Carousel = (props) => {
     // 100 INJUSTICE
 
     const changeSlide = (e) => {
-        //  return index === 0 ? setIndex(-100) : null
-        // console.log(e.target.id)
         const target = e.target.id
         switch (index) {
             case 0:
                 target === "prev" ? setIndex(100) : setIndex(-100)
                 break;
             case 100:
-                // setIndex(-100)
                 target === "prev" ? setIndex(-100) : setIndex(0)
                 break;
             case -100:
-                // setIndex(0)
                 target === "prev" ? setIndex(0) : setIndex(100)
                 break;
             default:
                 return undefined;
         }
-        // console.log(target)
     }
 
 

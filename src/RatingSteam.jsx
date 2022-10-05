@@ -2,6 +2,7 @@ import { useState } from "react";
 import useGetAPI from "./useGetAPI";
 import { GrNext, GrFormNext } from "react-icons/gr"
 import Loading from "./Loading";
+import { FaSteamSymbol } from "react-icons/fa"
 
 
 const RatingSteam = ({ redirect }) => {
@@ -34,9 +35,12 @@ const RatingSteam = ({ redirect }) => {
                             <div className="price">
                                 <p className="sale-price">${salePrice}</p>
                                 <p className="normal-price">{salePrice === normalPrice ? null : normalPrice}</p>
-                                {/* <p>{salePrice === normalPrice ? salePrice}</p> */}
                             </div>
-                            <p className="rating">{steamRatingPercent}%</p>
+                            <p className="rating">
+                                <span>
+                                    <FaSteamSymbol />
+                                </span>
+                                {steamRatingPercent}%</p>
                         </a>
                     </div>
                 })

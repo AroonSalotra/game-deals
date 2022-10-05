@@ -13,6 +13,8 @@ import RatingSteam from './RatingSteam';
 import Footer from './Footer';
 import Loading from './Loading';
 import Background from './Background';
+import Savings from './Savings';
+import Break from './Break';
 
 function App() {
   const [index, setIndex] = useState(0)
@@ -44,11 +46,12 @@ function App() {
         <Recent redirect={redirect} />
       </div>
       <Rating redirect={redirect} roundNum={roundNum} />
-      <PriceLow redirect={redirect} roundNum={roundNum} />
-      <div className="bg-dark">
+      <div className="wrapper-column">
         <PriceMed handlePageIndex={handlePageIndex} redirect={redirect} />
         <RatingSteam redirect={redirect} />
+        <Savings />
       </div>
+      <PriceLow redirect={redirect} roundNum={roundNum} />
       <Footer />
       {/* <Background /> */}
     </div>

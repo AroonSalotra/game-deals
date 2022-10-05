@@ -10,10 +10,10 @@ const Rating = ({ redirect, roundNum }) => {
 
     return (
         <>
-            {/* <Break /> */}
-            <h2 className="title">Highest Rated</h2>
+            <Break />
+            <h2 className="title align">Critically Acclaimed</h2>
             <div className="container-game bg">
-                {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID }) => {
+                {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID, savings, steamAppID, isOnSale }) => {
                     return <div key={gameID} className="game-card">
                         <a href={`${redirect}${dealID}`} target={"_blank"} rel="noreferrer">
                             <img onError={(e) => {
@@ -21,10 +21,17 @@ const Rating = ({ redirect, roundNum }) => {
                             }}
                                 src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg?t=1660827879`}
                                 className="game-img" alt={title} />
-                            <ul className="price">
-                                <li className="sale-price">${salePrice}</li>
-                                <li className="normal-price">${normalPrice}</li>
-                            </ul>
+
+                            {isOnSale === "1" ?
+                                <ul className="price">
+                                    <li className="sale-price">${salePrice}</li>
+                                    <li className="normal-price">${normalPrice}</li>
+                                </ul>
+                                :
+                                <ul className="price">
+                                    <li className="sale-price">${normalPrice}</li>
+                                </ul>
+                            }
                             <p className="discount">
                                 {roundNum(savings) > 0 ? "-" + roundNum(savings) + "%" : null}
                             </p>
@@ -33,6 +40,7 @@ const Rating = ({ redirect, roundNum }) => {
 
                 })
                     : <Loading />}
+                    
             </div>
         </>
     );
