@@ -14,7 +14,7 @@
 }
 
 body {
-  background: rgb(117, 123, 156);
+  background: rgb(37, 37, 37);
 }
 
 a {
@@ -527,21 +527,15 @@ header>li {
   color: white;
   margin-top: 5rem;
   padding: 1rem;
-}
-
-.footer>ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 5rem;
-  font-size: 1.5rem;
-  list-style-type: square;
+  flex-wrap: wrap;
 }
 
-footer li {
-  cursor: pointer;
+.footer a:hover {
+  color: var(--clr-accent);
 }
-
 
 .hide {
   display: none;
@@ -640,7 +634,12 @@ footer li {
 
   .break {
     display: none;
+  }
 
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 

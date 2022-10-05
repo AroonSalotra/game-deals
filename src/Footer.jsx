@@ -1,19 +1,16 @@
 const Footer = () => {
     const listOne = [
-        { text: "My Github", redrect: "#" },
-        { text: "Cheapshark API", redrect: "#" },
-        { text: "My Website", redrect: "#" },
+        { text: "My Github", redirect: "https://github.com/AroonSalotra" },
+        { text: "Cheapshark API", redirect: "https://apidocs.cheapshark.com/" },
+        { text: "My Website", redirect: "https://aroonsalotra.github.io/portfolio-website/" },
     ]
     return (
         <footer className="footer">
-            {/* <p>This website is free and non-profit made using <a href="">Cheapshark API</a> & React Icons</p> */}
-            <ul>
-                {listOne.map(({ text, redirect }) => {
-                    return <a href={redirect} target={"_blank"} rel="noreferrer">
-                        <li>{text}</li>
-                    </a>
-                })}
-            </ul>
+            {listOne.map(({ text, redirect }) => {
+                return <a href={redirect} target="_blank" rel="noreferrer">
+                    <p>{text}</p>
+                </a>
+            })}
         </footer>
     );
 }
