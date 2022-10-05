@@ -6,9 +6,9 @@ const Recent = ({ redirect }) => {
     // console.log(data)
     return (
         <>
-            <div className="container-game-grid">
-                {/* <h2 className="title title-small"
-                    style={{ height: "2rem" }}>Upcoming</h2> */}
+            <div className="container-col-small">
+                <h2 className="title title-small"
+                    style={{ height: "2rem" }}>Upcoming</h2>
                 {data ? data.map(({ title, metacriticScore, thumb, normalPrice, salePrice, gameID, dealID }) => {
                     return <div key={gameID} className="game-card">
                         <a href={`${redirect}${dealID}`} target={"_blank"}>

@@ -58,7 +58,6 @@ const Carousel = (props) => {
     return (
         <>
             <div className="carousel-wrapper" >
-                <p style={{ color: "white" }} >{index}</p>
                 <div className="carousel-content"
                     style={{ transform: `translateX(${index}%)` }}>
                     {data ?
@@ -79,16 +78,19 @@ const Carousel = (props) => {
                         })
                         : null}
                 </div>
-            </div>
 
-            <div className="carousel-btns">
-                <button onClick={(e) => changeSlide(e)} >
-                    <IoIosArrowBack className="btn-icon" id="prev" />
-                </button>
-                <button onClick={(e) => changeSlide(e)}
-                    id="next">
-                    <IoIosArrowForward className="btn-icon" />
-                </button>
+                {/* <div className="carousel-btns">
+                    <button id="btn-prev"
+                        onClick={(e) => changeSlide(e)} >
+                        <IoIosArrowBack className="btn-icon" id="prev" />
+                    </button>
+
+                    <button id="btn-next"
+                        onClick={(e) => changeSlide(e)} >
+                        <IoIosArrowForward className="btn-icon" id="next" />
+                    </button>
+
+                </div> */}
             </div>
         </>
     );
