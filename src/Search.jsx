@@ -1,14 +1,11 @@
 import useGetAPI from "./useGetAPI";
 import { useEffect, useState, useRef } from "react"
-import axios from "axios"
-import { MdCancel } from "react-icons/md"
 
 const Search = ({ link, redirect }) => {
 
     const [search, setSearch] = useState("")
     const [amount, setAmount] = useState(5)
     const [display, setDisplay] = useState("hide")
-    const [cancel, setCancel] = useState("hide")
 
     const ref = useRef(null)
 
@@ -27,21 +24,12 @@ const Search = ({ link, redirect }) => {
         if (e.target.value.length > 1) {
             setUrl(`https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${search}&metacritic=1`)
             setAmount()
-            setCancel("")
             setDisplay("")
         } else {
             setUrl(`https://www.cheapshark.com/api/1.0/deals?storeID=1&onSale=true&upperPrice=20&metacritic=80`)
             setAmount(5)
             setDisplay("hide")
-            setCancel("hide")
         }
-    }
-
-    const clearSearch = () => {
-        setSearch("")
-        setCancel("hide")
-        setDisplay("hide")
-        setUrl("")
     }
 
     useEffect(() => {

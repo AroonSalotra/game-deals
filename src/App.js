@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Results from './Search';
-import Search from './Search';
 import { useState } from 'react';
 import Rating from './Rating';
 import Header from './Header';
@@ -11,10 +8,7 @@ import Featured from './Featured';
 import PriceMed from './PriceMed';
 import RatingSteam from './RatingSteam';
 import Footer from './Footer';
-import Loading from './Loading';
-import Background from './Background';
 import Savings from './Savings';
-import Break from './Break';
 
 function App() {
   const [index, setIndex] = useState(0)

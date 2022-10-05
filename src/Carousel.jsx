@@ -1,14 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import useGetAPI from "./useGetAPI";
-import { BiRightArrow, BiLeftArrow } from "react-icons/bi"
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 
 const Carousel = (props) => {
     const { redirect } = props;
     const [index, setIndex] = useState(0)
-    const [link, setLink] = useState(null)
     const { data } = useGetAPI("https://www.cheapshark.com/api/1.0/deals?storeID=1&AAA=true&onSale=true", 3)
 
     console.log(data)
@@ -34,26 +31,6 @@ const Carousel = (props) => {
         return () => clearInterval(interval)
     }, [index])
 
-    //- 100 ZOMBIE
-    // 100 INJUSTICE
-
-    const changeSlide = (e) => {
-        const target = e.target.id
-        switch (index) {
-            case 0:
-                target === "prev" ? setIndex(100) : setIndex(-100)
-                break;
-            case 100:
-                target === "prev" ? setIndex(-100) : setIndex(0)
-                break;
-            case -100:
-                target === "prev" ? setIndex(0) : setIndex(100)
-                break;
-            default:
-                return undefined;
-        }
-    }
-
 
     return (
         <>
@@ -76,19 +53,6 @@ const Carousel = (props) => {
                         })
                         : null}
                 </div>
-
-                {/* <div className="carousel-btns">
-                    <button id="btn-prev"
-                        onClick={(e) => changeSlide(e)} >
-                        <IoIosArrowBack className="btn-icon" id="prev" />
-                    </button>
-
-                    <button id="btn-next"
-                        onClick={(e) => changeSlide(e)} >
-                        <IoIosArrowForward className="btn-icon" id="next" />
-                    </button>
-
-                </div> */}
             </div>
         </>
     );
